@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="list">
+			<!-- <dl>
+				<dt><img src="" alt="" /></dt>
+				<dd><span>名称：</span><span>产品1</span></dd>
+				<dd><span>单价</span><span>40.00元</span></dd>
+				<dd><p>这时很好的产品</p></dd>
+				<button onclick="deleteme()">删除</button>
+			</dl> -->
+		</div>
+		<script>
+			const products = [
+				{id:1,name:'产品1',price:40,descripton:'很不错的产品'},
+				{id:2,name:'产品2',price:40,descripton:'很不错的产品'},
+				{id:3,name:'产品3',price:40,descripton:'很不错的产品'},
+				{id:4,name:'产品4',price:40,descripton:'很不错的产品'}
+			]
+			//这里传入的obj，就是html this，this就是当前dom，就是那个button
+			function deleteme(obj){
+				console.log(obj.nodeName);
+				var dl = obj.parentNode;
+				dl.remove();
+			} 
+			function showProduct(){
+				var html='';
+				for (let s of products) {
+					html += `
+						<dl>
+							<dt><img src="" alt="" /></dt>
+							<dd><span>名称：</span><span>${s.name}</span></dd>
+							<dd><span>单价</span><span>${s.price}</span></dd>
+							<dd><p>这时很好的产品</p></dd>
+							<button onclick="deleteme(this)">删除</button>
+						</dl>
+					`;
+				}
+				const ad = document.querySelector('.list');
+				ad.innerHTML +=html;
+			}
+			showProduct();
+		</script>
+	</body>
+</html>

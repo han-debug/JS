@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//1.最简单的json对象 
+			const stu={
+				'id' : 1001,
+				'name' : 'jack',
+				'gender' : false
+			}
+			console.log(stu,stu.id,stu.name,stu.gender);
+			//2.对象里定义方法
+			const stu2={
+				id : 1001,
+				name : 'jack',
+				gender : false,
+				say:function(s){
+					console.log(this.name+'说:'+s);
+				},
+				address:{
+					city:'上海市',
+					area:'浦东新区',
+					streat:'东方路123号'
+				}
+			}
+			stu2.say('饭吃了吗');
+			console.log(stu2.address.streat);
+			const book={}//一个空对象
+			book.id = 1;
+			book.name = 'js';
+			book.price = '30';
+			book.show = function(){
+				console.log(book.id,book.name,book.price);
+			}
+			console.log(book.name);
+			book.show();
+			//3.可以json对象嵌套
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

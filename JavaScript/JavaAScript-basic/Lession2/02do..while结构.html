@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			// 和电脑玩猜数字游戏
+			// 电脑出随机数0-100之间[1,100)
+			// 玩家猜数字,电脑给出大了,小了的提示,最后猜对了退出
+			// 电脑给出提示:猜对了,共猜了X次
+			let count = 0;
+			let num = 0;
+			let x = parseInt(Math.random() * 100);
+			if(x == 100) x -= 1;
+			console.log(x);
+			do{
+				count += 1;
+				num = parseInt(prompt('猜猜是多大,'+'第'+count+'次'));
+				if(num > x)
+					alert('大了');
+				if(num < x)
+					alert('小了');
+				
+			}while(num != x);
+			alert('猜对了，共猜了'+count+'次'+',答案就是'+x+'!');
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

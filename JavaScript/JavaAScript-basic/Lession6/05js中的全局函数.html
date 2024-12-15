@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//如果一个函数不在一个类，对象里，那就是全局的，window的
+			// decodeURI() 解码某个编码的URI
+			// encodeURI() 把字符串编码为URI
+			//需要对url进行编码
+			let url = '/home/list?name='+encodeURI('张 三');
+			console.log(url);
+			console.log(decodeURI(url));
+			//isNaN()函数用于检=检查其参数是否是非数字
+			console.log(isNaN('a'),isNaN(1));
+ 		</script>
+	</head>
+	<body>
+	</body>
+</html>

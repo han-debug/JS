@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			const books = [
+				[1,'java基础',20],
+				[2,'js基础',10],
+				[3,'c++',30],
+				[4,'go基础',20],
+				[5,'python基础',50]
+			]
+			console.log(books[0][1]);
+			let html = '<table border = "1">';
+			html += '<tr>'
+			html += '<th>编号</th><th>书名</th><th>单价</th>'
+			html += '</tr>'
+			for (let book of books) {
+				html += '<tr>';
+				html += '<td>'+book[0]+'</td>';
+				html += '<td>'+book[1]+'</td>';
+				html += '<td>'+book[2]+'</td>';
+				html += '</tr>';
+			}
+			html += '</table>';
+			document.write(html);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

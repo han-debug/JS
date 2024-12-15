@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var arr = [1,2,3];
+			// 尾部追加
+			arr.push(4);
+			console.log(arr);
+			//尾部删除
+			let x1 = arr.pop();
+			//join方法是将数组里的每一个元素按照指定字符串拼接起来
+			console.log(x1,arr.join(','));
+			//头部插入
+			arr.unshift(10,20);
+			console.log(arr.join(','));
+			//头部删除
+			x1 = arr.shift();
+			console.log(x1,arr.join(','));
+			arr.push(6,7,8,9);
+			console.log('删除前'+arr);
+			//指定位置删除() 含义，在索引2开始，删除3个元素
+			arr.splice(2,3);
+			console.log('删除后'+arr);
+			arr.splice(2,3,50,60,70,80);
+			console.log('删除后插入'+arr);
+			arr.splice(4,0,999);//在索引为4的位置上插入999
+			console.log('插入'+arr);
+			arr = [1,2,3,4,5,6,7,8,9,10];
+			arr2 = arr.slice(3,6)//左闭右开，从索引3开始取到索引6，不包括6
+			console.log('切片数组'+arr2.join(','),'原数组'+arr.join(','));
+			arr2 = arr.slice(3)//从三到最后
+			console.log('切片数组'+arr2 .join(','));
+			//concat方法，拼接两个数组
+			arr1=[1,2,3,4];
+			arr2=[7,8,2];
+			//需求，合并两个数组
+			arr3 = arr1.concat(arr2);
+			console.log(arr3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

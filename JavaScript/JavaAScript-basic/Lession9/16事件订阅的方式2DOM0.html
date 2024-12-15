@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<button id="btn1">dom0级订阅事件，单击我试试</button>
+		<button id="btn2">取消btn1事件</button>
+		<script>
+			const btn1 = document.querySelector('#btn1');
+			btn1.onclick = function clickme(){
+				document.bgColor = '#ab8df3';
+			}
+			document.querySelector('#btn2').onclick = function(){
+				if(confirm('真的要取消吗'))
+					btn1.onclick = null;
+			}
+		</script>
+	</body>
+</html>

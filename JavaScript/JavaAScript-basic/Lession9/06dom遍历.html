@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="books">
+			<h2>图书列表</h2>
+			<ul>
+				<li><a href="/book/1">图书1</a></li>
+				<li><a href="/book/2">图书2</a></li>
+				<li><a href="/book/3">图书3</a></li>
+				<li><a href="/book/4">图书4</a></li>
+				<li><a href="/book/5">图书5</a></li>
+			</ul>
+		</div>
+		
+		<script>
+			const h3 = document.querySelector('.books>h2');
+			console.log(h3.nodeName,h3.nodeType,h3.nodeValue);
+			//获取父元素h3.parentElement||h3.parentNode;
+			const div = h3.parentElement||h3.parentNode;
+			console.log(div.nodeName);
+			//childNodes子元素含换行符号
+			console.log('div的子元素',div.childNodes.length);
+			
+			//children就是子元素
+			for (let s of div.childNodes) {
+				console.log(s.nodeName,s.nodeType);
+			}
+			console.log('------------------------------');
+			for (let s of div.children) {
+				console.log(s.nodeName,s.nodeType);
+			}
+			var node;
+			const ul = h3.nextElementSibling||h3.nextSibling;//下个兄弟节点
+			
+			for (let li of ul.children) {
+				node = li.firstElementdChild||li.firstChild;
+	
+				//node.attributes获取所有节点的属性集合
+				console.log(node.nodeName,node.innerHTML,node.attributes[0]);
+			}
+		</script>
+	</body>
+</html>

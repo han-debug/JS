@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.d1{
+				width: 300px;
+				height: 300px;
+				margin: 50px auto;
+				background-color: #faebd7;
+			}
+			.d1 span{
+				font-size: 30px;
+				text-align: center;
+				line-height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d1">
+			<p>
+				<span>理解事件冒泡机制</span>
+				adEventListener()默认是从内而外的，第三个参数默认是false，如果是true则相反
+			</p>
+		</div>
+		<script>
+			const div = document.querySelector('.d1');
+			const p = document.querySelector('.d1 p');
+			const span = document.querySelector('.d1 span');
+			//默认是从内而外的，第三个参数默认是false，如果是true则相反
+			div.addEventListener('click',function(){
+				alert('div');
+			})
+			p.addEventListener('click',function(){
+				alert('p');
+				//event是事件参数
+				event.stopPropagation();//停止事件传播，即冒泡终止
+			})
+			span.addEventListener('click',function(){
+				alert('span');
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../JS/hello.js"></script>
+	</head>
+	<body>
+		<!-- 内联式 -->
+		<button onclick="alert('hello world');">hello world</button>
+	</body>
+	可以出现在任意位置，如果是在head里，会先加载head，这时会加载script并执
+	行脚本，但是body里的html标签还没加载，页面是空白的
+	如果在body或者是html结束前，那么页面渲染完毕后再执行的脚本，这时可以看到内容
+	<script>
+		alert("hello world again");
+	</script>
+</html>

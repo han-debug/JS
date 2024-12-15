@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let a = 10,
+				b = 20;
+			let max = a > b ? a : b;
+			// a?b:c  如果a为真,那结果是b否则为c,可嵌套
+			console.log(max);
+
+			let nums = 27;
+			let size = 4;
+			let room = nums % size == 0 ? nums / size : (parseInt(nums / size) + 1);
+			console.log(room);
+			let month = 1;
+			let season = month > 12 || month < 1 ? '无效月份' : month >= 10 ? '第四季度' : month >= 7 ? '第三季度' : month >= 4 ? '第二季度' :
+				'第一季度';
+				console.log('季度是',season);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			const books = [
+				{'id' : 1,'name':'java'},
+				{'id' : 2,'name':'C'},
+				{'id' : 3,'name':'C++'},
+				{'id' : 4,'name':'javascript'}
+			]
+			function loadLesson(){
+				const select = document.querySelector("[name='lesson']");
+				for (let book of books) {
+					const opt = document.createElement('option');
+					opt.setAttribute('value',book.id);
+					opt.innerHTML = book.name;
+					select.appendChild(opt);
+				}
+			}
+			//页面加载事件，body加载后执行
+			window.addEventListener('load',function(){
+				loadLesson();
+				document.querySelector('#btn1').addEventListener('click',function(){
+					const select = document.querySelector("[name='lesson']");
+					//获得选中的下拉列表
+					const opt = select.options[select.selectedIndex];
+					const div = document.querySelector('.tip');
+					div.innerHTML = `选中的内容是${opt.text},值为${opt.value}`;
+				});
+				
+			});
+			//unload在页面关闭时触发
+			window.addEventListener('unload',function(){
+				localStorage.setItem('hahaha','hahahahha');
+			})
+		</script>
+	</head>
+	<body>
+		<select name="lesson">
+			<option value="-1">请选择</option>
+		</select>
+		<a href="javascript:void(0)" id="btn1">按钮</a>
+		<div class="tip"></div>
+	</body>
+	
+</html>

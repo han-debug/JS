@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<script>
+			//根据id元素取单个dom对象，html标签的id属性唯一不重复，精准的查找单个
+			var d1 = document.getElementById('d1');
+			console.log(d1.tagName);
+			//innerHTML是内部的html文本
+			d1.innerHTML = '我是DIV1';
+		</script>
+	</body>
+</html>

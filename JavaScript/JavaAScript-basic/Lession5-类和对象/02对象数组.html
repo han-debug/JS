@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//类名大驼峰，参数可以初始化
+			function Student(id = 123,name = 'you nane',gender = true,number = 123465){
+				//this是当前对象的引用，创建属性
+				this.id = id;
+				this.name = name;
+				this.gender = gender;
+				this.number = number;
+				//变量 = 匿名函数
+				this.showMe=function(){
+					console.log(this.id,this.name,this.gender,this.number);
+				}
+			}
+			var student = new Array();
+			student[0] = new Student(1,'小红',false,123456); 
+			student[1] = new Student(2,'小明',true,12345678);
+			student[2] = new Student(3,'小壮',true,8888888); 
+			var html = "<table><tr><th>学号</th><th>姓名</th><th>性别</th><th>号码</th></tr>";
+			for (let s of student) {
+				html += `
+						<tr>
+							<td>${s.id}</td>
+							<td>${s.name}</td>
+							<td>${s.gender}</td>
+							<td>${s.number}</td>
+						</tr>
+				`;
+			}
+			html += "</table>";
+			document.write(html);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

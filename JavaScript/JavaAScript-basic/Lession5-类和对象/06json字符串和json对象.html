@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			const stu={
+				'id' : 1001,
+				'name' : 'jack',
+				'gender' : false
+			}
+			var a = JSON.stringify(stu);
+			console.log(a);
+			var jsonstr = `[
+				{id:1,title:'java',qty:1,price:20},
+				{id:2,title:'c',qty:1,price:30},
+				{id:3,title:'c++',qty:1,price:40},
+				{id:4,title:'js',qty:1,price:50},
+			]`;
+			console.log(jsonstr,typeof(jsonstr));
+			//使用eval()函数将json格式字符串转成json对象
+			const books = eval(jsonstr);
+			//eval函数用来执行表达式的
+			console.log(eval('1+2+3+4'));
+			console.log(books.length,books);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

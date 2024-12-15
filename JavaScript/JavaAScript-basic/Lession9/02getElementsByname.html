@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<p><label for="username">用户名</label>
+			<input type="text" name="username" value="" /></p>
+			<p><label for="username">密码</label>
+			<input type="text" name="pwd" value=""/></p>
+			<!-- onsubmit是表单提交之前触发执行 -->
+			<input type="button" value="登录" onclick="checkme()"/>
+			
+		</div>
+		
+		<script type="text/javascript">
+			function checkme(){
+				//一般是用在获取表单元素上 返回的是集合
+				const username = document.getElementsByName('username')[0];
+				const pwd = document.getElementsByName('pwd')[0];
+				console.log('用户名:'+username.value,'密码:'+pwd.value);
+			}
+			
+		</script>
+	</body>
+</html>

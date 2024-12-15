@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<h1>列表</h1>
+			<ul class="left">
+				<li><span>AAAAA</span></li>
+				<li><span>BBBBB</span></li>
+				<li><span>CCCCC</span></li>
+				<li><span>DDDDD</span></li>
+				<li><span>EEEEE</span></li>
+			</ul>
+		</div>
+		<script>
+			const li = document.createElement('li');//创建一个元素
+			li.setAttribute('style','color:red');//设置节点属性
+			const a = document.createElement('a');
+			a.setAttribute('href','07操作节点内容.html');
+			a.innerHTML = 'ffffff';
+			const ul = document.querySelector('.left');
+			li.appendChild(a);//将a添加进来
+			ul.appendChild(li);//再将li添加进ul中
+			//内部插入第一个位置,可任选
+			ul.insertBefore(li,ul.children[0]);
+			//删除CCCCC
+			const CCC = ul.children[3];
+			CCC.remove();//删除
+			//父元素删除子元素，返回删除的子元素
+			ret = ul.removeChild(ul.children[2]);
+			console.log(ret);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let flag = prompt('请输入学生成绩等级A-E');
+			// switch是开关,如果匹配到case里的内容就会执行下面语句,如果没碰到break
+			// 就会一直执行到最后
+			switch(flag){
+				case 'A':
+					alert('>=90');
+					break;
+				case 'B':
+					alert('>=80');
+					break;
+				case 'C':
+					alert('>=70');
+					break;
+				case 'D':
+					alert('>=60');
+					break;
+				case 'E':
+					alert('>=0');
+					break;
+				default:
+					alert('无效成绩');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

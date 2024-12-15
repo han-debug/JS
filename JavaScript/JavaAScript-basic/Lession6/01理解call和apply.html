@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var name = '小红';
+			var obj = {
+				name : '小明'
+			}
+			function fun(s1,s2){
+			//this表示当前对象的引用
+				console.log(this,this.name + '说');
+				console.log(s1,s2);
+			}
+			//如果一个函数没有定义在类里，那么这个函数就是属于顶层的，顶层就是window
+			fun('hah','lalal');
+			//fun.call(obj)第一个参数是一个对象，改变了fun函数的上下文，让fun函数变成了obj对象的方法
+			fun.call(obj,1,2);
+			//apply和call一样，只不过是把参数写成数组的形式
+			fun.apply(obj,['游乐场','有趣']);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

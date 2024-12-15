@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.d1{
+				width: 300px;
+				height: 300px;
+				border: 1px solid #333;
+				}
+		</style>
+		<script src="../JS/common.js"></script>
+	</head>
+	<body>
+		<div class="d1" style="width: 400px;">行内与非行内</div>
+		<script>
+			const div = document.querySelector('.d1');
+			//获取非行内样式
+			let h = window.getComputedStyle(div,null)['height'];
+			console.log('宽度:',div.style.width,h);
+			console.log(getStyle(div,'border'));
+		</script>
+	</body>
+</html>

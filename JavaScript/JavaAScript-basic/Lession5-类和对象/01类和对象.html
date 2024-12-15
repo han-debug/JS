@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//类名大驼峰，参数可以初始化
+			function Student(id = '123',name = 'you nane',gender = true,number = '1'){
+				//this是当前对象的引用，创建属性
+				this.id = id;
+				this.name = name;
+				this.gender = gender;
+				this.number = number;
+				//变量 = 匿名函数
+				this.goToSchool = function(){
+					console.log('去上学');
+				}
+				this.goToHome = function(){
+					console.log('回家');
+				}
+				this.eatBreakfeat = function(){
+					console.log('吃饭');
+				}
+			}
+			var stu1 = new Student(1,'Jack',true,'123456');
+			var stu2 = new Student(2,'Lusic',false,'456789');
+			 
+			console.log(stu1.id,stu1.name,stu1.gender,stu1.number);
+			console.log(stu2.id,stu2.name,stu2.gender,stu2.number);
+			stu1.goToSchool();
+			stu2.goToHome();
+			stu1.eatBreakfeat();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

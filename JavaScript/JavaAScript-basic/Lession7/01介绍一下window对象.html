@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//window是顶层对象，可以省略
+			function dodel(){
+				if(confirm('真的要删除吗')){
+					alert('没啦');
+				}
+				else{
+					var b = prompt('请告诉我为什么放弃了？');
+					alert(b);
+				}
+			}
+			function openwin(){
+				//居中显示
+				var height = window.screen.availHeight/2-150;
+				var width = window.screen.availWidth/2-300;
+				
+				var win = open('02.html','_bank',`width = 600,height = 300,left = ${width},top = ${height}`);
+				win.focus();
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="dodel();">删除</button>
+		<a href="javascript:void(0)" onclick="openwin();">打开一个新页面</a>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//函数的参数是值类型和引用型类型的区别：本质上没有区别，
+			// 形成都是分配空间,赋值,区别是值类型赋值的是真正的值,引用类型赋值
+			// 的是地址,一般是在堆里
+			function swap(a){
+				let temp = a[0];
+				a[0] = a[1];
+				a[1] = temp;
+			}
+			
+			let arr = [100,200];
+			swap(arr);
+			//这里可以交换，是因为方法里的a[0]指向的是传进来的地址，即便
+			// 开辟的空间销毁了,修改的值也保存下来了,是栈指向堆的修改,栈释放了
+			// 和堆里面的内容无关
+			console.log(arr[0],arr[1]);
+			
+			function swap2(a,b){
+				let temp = a;
+				a = b;
+				b = temp;
+			}
+			let a = 10, b = 20;
+			swap2(a,b);
+			console.log(a,b);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			let x=10,y=20;
+			console.log(x==y,x!=y,x>=y,x<=y);
+			// ==和===的区别
+			// ==比较,会自动将类型转换为相同的类型,在比较
+			// ===恒等,不会将类型自动转换,如果类型不一致,就不相等了
+			let a = '10';
+			console.log(a == x,a === x);
+			// &&与   ||或  !非
+			console.log(x>10&&x<=50);
+			let ch = '8';
+			let exp = ch >= 'a'&& ch<='z'||ch>='A'&&ch<='Z';
+			console.log(exp);
+			// 判断是否是闰年,条件,能被四整除,并且不能被一百整除,或者被四百整除
+			let year = 2024;
+			console.log(year % 4 == 0 && year % 100 != 0 || year % 400 ==0);
+		</script>
+		<script>
+			// 短路与 和 短路或
+			x = 10;
+			y = 20;
+			exp = x<10 && ++y>20;
+			console.log(y);
+			exp = x<20 || ++y>20;
+			console.log(y);
+			// y = 20 为什么？
+			// 因为&&要求两侧为真，如果左边的是假，那右边的就不会影响结果
+			// 系统也不会扫描执行,||要求一个真就是真，所以从左边开始，检测
+			// 到一个真就不会继续执行后面的语句了
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

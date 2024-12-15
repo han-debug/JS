@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			console.log(location.href);//网址
+			console.log(location.hostname);//主机
+			console.log(location.pathname);//pathnanme
+			console.log(location.search);//查询字符串
+			var d = new Date();
+			console.log(d.toLocaleString());
+		</script>
+	</head>
+	<body>
+		<h1>location地址栏对象</h1>
+		<!-- javascript:void(0)防止跳转 -->
+		<!-- 进入一个新页面 -->
+		<a href="javascript:void(0)" onclick="location.assign('02.html')">查看案例</a>
+		<a href="" onclick="location.reload()">刷新</a>
+		<!-- 替换会去掉浏览历史 -->
+		<a href="javascript:void(0)" onclick="location.replace('02.html')">替换</a>
+	</body>
+</html>

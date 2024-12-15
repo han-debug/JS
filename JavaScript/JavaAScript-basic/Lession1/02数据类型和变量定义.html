@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var a = 10;
+			console.log('a=',a,typeof(a));
+			a = 9.9;
+			console.log('a=',a,typeof(a));
+			a = "abc";
+			console.log('a=',a,typeof(a));
+			a = {};
+			console.log('a=',a,typeof(a));
+			a = [];
+			console.log('a=',a,typeof(a));
+			a = false;
+			console.log('a=',a,typeof(a));
+			// 变量未定义
+			// 去掉b,是undefined
+			console.log('b=',typeof(b));
+			// 怎么理解顶级,顶级对象,window 对象,表示当前对象的,window
+			console.log(window.a);
+			b = 300;//没有使用var关键字,那么变量是属于顶层对象,window的
+			console.log(b,window.b);
+	
+		</script>
+	</head>
+	<body>
+		<script>
+			console.log(x);
+			var x = 19;
+			console.log(x);
+			// 虽然js是解释型语言,但是会先定义变量,但并不赋值,然后再从上开始编译
+			// 所以是显示结果是undefine而不是报错
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<button id="btn1">dom0级订阅事件，单击我试试</button>
+		<button id="btn2">取消btn1事件</button>
+		<script>
+			const btn1 = document.querySelector('#btn1');
+			//采用addEventListener可以实现，一个事件订阅多次
+			btn1.addEventListener('click',btn1_1);
+			//如，后委托的先执行
+			btn1.addEventListener('click',function(){alert('事件可以订阅多次')})
+			function btn1_1(){document.bgColor = '#ab8df3';}
+			const btn2 = document.querySelector('#btn2');
+			btn2.addEventListener('click',function(){
+				btn1.removeEventListener('click',btn1_1);
+			});
+		</script>
+	</body>
+</html>

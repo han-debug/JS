@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function save(){
+				let key = prompt('请输入key：');
+				let value = prompt('请输入值：');
+				sessionStorage.setItem(key,value);
+				alert('保存成功');
+			}
+			function read(){
+				//如果不存在那么null
+				let sto = sessionStorage.getItem(prompt('请输入要查询的'));
+				//key方法判断key是否存在，不存在null
+				console.log('key-->',sessionStorage.key('hahah'));
+				alert(sto);
+			}
+			function remove(){
+				let key = prompt('key？');
+				if(sessionStorage.getItem(key) == null){
+					alert('不存在');
+					return;
+				}
+				sessionStorage.removeItem(key);
+				alert('成功');
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="save();">save 存数据</button>
+		<button onclick="read();">read 读数据</button>
+		<button onclick="remove();">删除</button>
+		<button onclick="sessionStorage.clear()">清空</button>
+	</body>
+</html>

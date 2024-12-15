@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="name" id="name" value="" placeholder="请输入"/>
+		<script>
+			const input = document.querySelector('#name');
+			console.log(input.attributes.length);
+			for (let s of input.attributes) {
+				console.log(s.nodeName,s.nodeType,s.nodeValue,s.value);
+			}
+			
+			txt = input.getAttribute('placeholder');
+			console.log(txt);
+			input.setAttribute('placeholder','hahaha');
+			txt = input.getAttribute('placeholder');
+			console.log(txt);
+			input.removeAttribute('placeholder');
+			txt = input.getAttribute('placeholder');
+			console.log(txt);
+		</script>
+	</body>
+</html>

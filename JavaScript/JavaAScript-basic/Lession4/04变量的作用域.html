@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var a56 = 199;
+			let o = 2;
+			function add(){
+				y = 100;//如果没有var，let，这里就相当于给顶级对象window，赋值一个属性y
+				var c = 200;	
+			}
+			add();
+			console.log(y,window.a56);//这里相当于访问window对象的y属性
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function getTriangleArea(a,b,c){
+				/**
+				 * a,b,c是边长
+				 * 返回值是面积，面积是-1就是参数错误或者无法构成三角形
+				 */
+				let area = -1;
+				if(a <= 0 || b <= 0 || c <= 0)
+					return area;
+				if(a + b > c && a + c > b && b + c > a){
+					let d = (a + b + c)/2;
+					area = Math.sqrt(d*(d - a)*(d - b)*(d - c));
+				}
+				return area;
+			}
+			let area = getTriangleArea(6,8,10);
+			console.log(area);
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

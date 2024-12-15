@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function add(a,b,c,d){
+				console.log(a+b+c+d);
+			}
+			add(1,2,3);
+			//函数的参数可以设置默认值，当调用时不指定参数的，那么就使用默认值
+			// 注意,默认值参数要连续,放在列表的右边
+			function add2(a=1,b=2,c=3,d=5){
+				console.log(a+b+c+d);
+			}
+			add2(2,3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

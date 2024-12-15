@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			/*
+			var d = new Date();
+			var d = new Date(millisecods);
+			var d = new Date(dateString);
+			var d = new Date(year, month, day, hours, minute, seconds, milliseconds);
+			*/
+			var d1 = new Date();
+			console.log(d1);
+			console.log(d1.toDateString());//日期
+			console.log(d1.toTimeString());//时间
+			var t = d1.getTime();
+			var d2 = new Date(t);
+			console.log(d1.toLocaleString());
+			console.log(d1.toLocaleDateString());
+			console.log(d1.toLocaleTimeString());
+			console.log(d1.toUTCString());
+			var d3 = new Date(t);//通过时间戳创建
+			console.log(d3.toLocaleString());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
